@@ -1,0 +1,71 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <meta name="description" content="Chijioke Umezinwa's portfolio website" />
+        <title>Portfolio-Chijioke</title>
+
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
+	    <!-- Bootstrap CSS -->
+	   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	   	<!-- Extra CSS -->
+	   
+	   	<link rel='stylesheet' type="text/css" href = "{% static 'style_experience.css' %}">
+		<link rel='stylesheet' type="text/css" href = "{% static 'styles.css' %}">
+	   	<link rel='stylesheet' type="text/css" href = "{% static 'style_home.css' %}">
+	   	<link rel='stylesheet' type="text/css" href = "{% static 'style_projects.css' %}">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-secondary mb-4 fixed-top" id="mainNav">
+		    <!-- <div class="container-fluid"> -->
+			<div class="container">
+		        <a class="navbar-brand" href="{% url 'index' %}">Chijioke's Website</a>
+				<button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					Menu
+					<svg class="svg-inline--fa fa-bars fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+						<path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">\</path>
+					</svg>
+				</button>
+
+		        <div class="navbar-collapse collapse" id="navbarResponsive">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item mx-0 mx-lg-1">
+							<a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'index' %}">Home</a>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'index' %}#about">About</a>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'experience_index' %}">Education/Experience</a>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'project_index' %}#projects">Projects/Skills</a>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'index' %}#contact">Contact</a>
+						</li>
+					</ul>
+		        </div>
+		    </div>
+		</nav>
+
+		
+		{% block page_content %}{% endblock %}
+		<!-- Optional JavaScript -->
+    	<!--Bootstrap JS which includes every Bootstrap js plugin and dependency, as well as Popper JS. Also Jquery JS -->
+		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<!-- Core theme JS-->
+	<script src = "{% static 'scripts.js' %}"></script>
+	</body>
+</html>
